@@ -18,9 +18,9 @@ class QuizBrain:
         self.check_answer(user_answer, current_question.answer)
 
     def still_has_questions(self):
-        if self.question_number > len(self.question_list):
-            return False
-        return True
+        if self.question_number < len(self.question_list):
+            return True
+        return False
         return self.question_number > len(self.question_list)
 
 
